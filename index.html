@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Quer namorar comigo?</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: Arial, sans-serif;
+      background-color: #ffe6f0;
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      margin-top: 100px;
+      color: #e60073;
+      font-size: 2.5em;
+    }
+
+    #botoes {
+      margin-top: 50px;
+      position: relative;
+      height: 300px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+      position: absolute;
+    }
+
+    #sim {
+      background-color: #4CAF50;
+      color: white;
+      left: 40%;
+    }
+
+    #nao {
+      background-color: #f44336;
+      color: white;
+      left: 50%;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Quer construir uma vida incrível ao meu lado? Uma vida em que, independente do que aconteça, a gente se apoie nas dificuldades, supere os desentendimentos e continue escolhendo um ao outro todos os dias?</h1>
+
+  <div id="botoes">
+    <button id="sim">Sim 💖</button>
+    <button id="nao">Não 😢</button>
+  </div>
+
+  <script>
+    const btnSim = document.getElementById("sim");
+    const btnNao = document.getElementById("nao");
+
+    // Link ao clicar no "Sim"
+    btnSim.addEventListener("click", () => {
+      window.location.href = "https://youtu.be/izGwDsrQ1eQ?si=hZeNPSP-iVlt5tAg"; // Substitua com seu link
+    });
+
+    // Movimento aleatório ao passar o mouse no "Não"
+    btnNao.addEventListener("mouseover", () => {
+      const container = document.getElementById("botoes");
+      const containerWidth = container.offsetWidth;
+      const containerHeight = container.offsetHeight;
+      const buttonWidth = btnNao.offsetWidth;
+      const buttonHeight = btnNao.offsetHeight;
+
+      const newX = Math.random() * (containerWidth - buttonWidth);
+      const newY = Math.random() * (containerHeight - buttonHeight);
+
+      btnNao.style.left = `${newX}px`;
+      btnNao.style.top = `${newY}px`;
+    });
+
+    // Se conseguir clicar no "Não"
+    btnNao.addEventListener("click", () => {
+      window.location.href = "https://youtu.be/5TVurUipFAE?si=ryG9RamOQAHmyA8l"; // Substitua com seu link
+    });
+  </script>
+
+</body>
+</html>
